@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
  * Created by zcfrank1st on 12/9/15.
  */
 @Configuration
-@ImportResource({"classpath:spring/dubbo-consumer.xml"})
+@ImportResource({"classpath:conf/dubbo-consumer.xml"})
 public class SpringConfig {
     @Bean
     public User user() {
