@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.deji.api.HelloApi;
 import com.example.bean.User;
 import com.example.property.Chao;
 import com.example.service.DemoService;
@@ -23,18 +22,18 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
-    @Autowired
-    private HelloApi helloService;
+//    @Autowired
+//    private HelloApi helloService;
 
     @RequestMapping(value ="/hello", method = RequestMethod.GET)
-    public String hello(){
+    public Chao hello(){
         System.out.println(user.getAge());
         System.out.println(user.getUserName());
         System.out.println(chao.getAge());
         System.out.println(chao.getName());
         System.out.println(demoService.getIt());
 
-        System.out.println(helloService.hello());
-        return "this is a spring boot demo";
+//        System.out.println(helloService.hello());
+        return chao;
     }
 }
